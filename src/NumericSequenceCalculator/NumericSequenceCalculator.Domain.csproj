@@ -44,14 +44,17 @@
     <Compile Include="Filters\FibonacciNumberFilter.cs" />
     <Compile Include="Guards\NumberGuards.cs" />
     <Compile Include="Exceptions\NumberArgumentException.cs" />
-    <Compile Include="Filters\NumberFilter.cs" />
+    <Compile Include="MaskedNumber.cs" />
+    <Compile Include="Masks\MultipleOfFiveAndThreeMask.cs" />
+    <Compile Include="Masks\MultipleOfFiveMask.cs" />
+    <Compile Include="Masks\MultipleOfThreeMask.cs" />
+    <Compile Include="Number.cs" />
+    <Compile Include="NumberProcessor.cs" />
     <Compile Include="NumberSequence.cs" />
     <Compile Include="Filters\OddNumberFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Masks\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

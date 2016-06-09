@@ -9,7 +9,7 @@ namespace NumericSequenceCalculator.Domain
 {
     public class NumberSequence
     {
-        private List<int> sequence;
+        private List<Number> sequence;
 
         public NumberSequence(int amount)
         {
@@ -17,7 +17,7 @@ namespace NumericSequenceCalculator.Domain
             this.sequence = GenerateSequence(amount);
         }
 
-        public List<int> Sequence
+        public List<Number> Sequence
         {
             get
             {
@@ -25,19 +25,19 @@ namespace NumericSequenceCalculator.Domain
             }
         }
 
-        private List<int> GenerateSequence(int amount)
+        private List<Number> GenerateSequence(int amount)
         {
-            var numbers = new List<int>(amount);
+            var numbers = new List<Number>(amount);
             for (var i = 0; i <= amount; i++)
             {
-                numbers.Add(i);
+                numbers.Add(new Number(i));
             }
             return numbers;
         }
 
-        public List<int> Filter(NumberFilter filter)
+        public List<Number> Process(NumberProcessor processor)
         {
-            return filter.Process(this.sequence);
+            return processor.Process(this.sequence);
         }
     }
 }

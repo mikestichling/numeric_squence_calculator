@@ -43,9 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MaskedNumberTests.cs" />
     <Compile Include="NumberFilterTests.cs" />
     <Compile Include="NumberGuardTests.cs" />
+    <Compile Include="NumberMaskTests.cs" />
     <Compile Include="NumberSequenceTests.cs" />
+    <Compile Include="NumberTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

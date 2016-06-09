@@ -6,30 +6,30 @@ using System.Threading.Tasks;
 
 namespace NumericSequenceCalculator.Domain.Filters
 {
-    public class FibonacciNumberFilter : NumberFilter
+    public class FibonacciNumberFilter : NumberProcessor
     {
-        public override List<int> Process(List<int> numbers)
+        public override List<Number> Process(List<Number> numbers)
         {
             if (numbers.Count <= 2)
                 return numbers;
 
-            var fibonaccis = new List<int>() { 0, 1 }; //by definition the Fibonacci sequence starts with 0 and 1.
+            var fibonaccis = new List<Number>() { new Number(0), new Number(1) }; //by definition the Fibonacci sequence starts with 0 and 1.
 
-            var excludingZero = numbers.Where(n => n != 0).ToList();
+            var excludingZero = numbers.Where(n => n.Value != 0).ToList();
 
             for (var i = 0; i < excludingZero.Count(); i++)
             {
-                var current = excludingZero[i];
+                var current = excludingZero[i].Value;
 
                 if (OutOfBounds(i))
                 {
-                    fibonaccis.Add(current);
+                    fibonaccis.Add(new Number(current));
                     continue;
                 }
 
-                if (current == fibonaccis[fibonaccis.Count - 1] + fibonaccis[fibonaccis.Count - 2])
+                if (current == fibonaccis[fibonaccis.Count - 1].Value + fibonaccis[fibonaccis.Count - 2].Value)
                 {
-                    fibonaccis.Add(current);
+                    fibonaccis.Add(new Number(current));
                 }
             }
 
