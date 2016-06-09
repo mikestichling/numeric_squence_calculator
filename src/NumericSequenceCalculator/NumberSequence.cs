@@ -11,10 +11,10 @@ namespace NumericSequenceCalculator.Domain
     {
         private List<int> sequence;
 
-        public NumberSequence(int number)
+        public NumberSequence(int amount)
         {
-            Guard.IsPositive(number);
-            this.sequence = GenerateSequence(number);
+            Guard.IsPositive(amount);
+            this.sequence = GenerateSequence(amount);
         }
 
         public List<int> Sequence
@@ -25,10 +25,10 @@ namespace NumericSequenceCalculator.Domain
             }
         }
 
-        private List<int> GenerateSequence(int number)
+        private List<int> GenerateSequence(int amount)
         {
-            var numbers = new List<int>(number);
-            for (var i = 1; i <= number; i++)
+            var numbers = new List<int>(amount);
+            for (var i = 0; i <= amount; i++)
             {
                 numbers.Add(i);
             }
