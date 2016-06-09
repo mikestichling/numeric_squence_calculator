@@ -19,7 +19,7 @@ namespace NumericSequenceCalculator.Tests
 
             var numbers = new NumberSequence(number).Sequence;
 
-            Assert.That(numbers.Count(), Is.EqualTo(10));
+            Assert.That(numbers.Count(), Is.EqualTo(11));
         }
 
         [Test]
@@ -29,16 +29,16 @@ namespace NumericSequenceCalculator.Tests
 
             var numbers = new NumberSequence(number).Sequence;
 
-            Assert.That(numbers[0], Is.EqualTo(1));
-            Assert.That(numbers[1], Is.EqualTo(2));
-            Assert.That(numbers[2], Is.EqualTo(3));
-            Assert.That(numbers[3], Is.EqualTo(4));
-            Assert.That(numbers[4], Is.EqualTo(5));
-            Assert.That(numbers[5], Is.EqualTo(6));
-            Assert.That(numbers[6], Is.EqualTo(7));
-            Assert.That(numbers[7], Is.EqualTo(8));
-            Assert.That(numbers[8], Is.EqualTo(9));
-            Assert.That(numbers[9], Is.EqualTo(10));
+            Assert.That(numbers[0], Is.EqualTo(0));
+            Assert.That(numbers[1], Is.EqualTo(1));
+            Assert.That(numbers[2], Is.EqualTo(2));
+            Assert.That(numbers[3], Is.EqualTo(3));
+            Assert.That(numbers[4], Is.EqualTo(4));
+            Assert.That(numbers[5], Is.EqualTo(5));
+            Assert.That(numbers[6], Is.EqualTo(6));
+            Assert.That(numbers[7], Is.EqualTo(7));
+            Assert.That(numbers[8], Is.EqualTo(8));
+            Assert.That(numbers[9], Is.EqualTo(9));
         }
 
         [Test]

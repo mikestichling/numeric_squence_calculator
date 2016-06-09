@@ -10,11 +10,16 @@ namespace NumericSequenceCalculator.Domain.Filters
     {
         public override List<int> Process(List<int> numbers)
         {
-            var fibonaccis = new List<int>();
+            if (numbers.Count <= 2)
+                return numbers;
 
-            for (var i = 0; i < numbers.Count; i++)
+            var fibonaccis = new List<int>() { 0, 1 }; //by definition the Fibonacci sequence starts with 0 and 1.
+
+            var excludingZero = numbers.Where(n => n != 0).ToList();
+
+            for (var i = 0; i < excludingZero.Count(); i++)
             {
-                var current = numbers[i];
+                var current = excludingZero[i];
 
                 if (OutOfBounds(i))
                 {

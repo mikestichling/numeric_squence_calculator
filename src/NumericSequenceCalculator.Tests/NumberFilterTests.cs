@@ -18,7 +18,7 @@ namespace NumericSequenceCalculator.Tests
 
             var filterNumbers = numbers.Filter(new EvenNumberFilter());
 
-            Assert.That(filterNumbers.Count(), Is.EqualTo(5));
+            Assert.That(filterNumbers.Count(), Is.EqualTo(6));
         }
 
         [Test]
@@ -28,11 +28,12 @@ namespace NumericSequenceCalculator.Tests
 
             var filterNumbers = numbers.Filter(new EvenNumberFilter());
 
-            Assert.That(filterNumbers[0], Is.EqualTo(2));
-            Assert.That(filterNumbers[1], Is.EqualTo(4));
-            Assert.That(filterNumbers[2], Is.EqualTo(6));
-            Assert.That(filterNumbers[3], Is.EqualTo(8));
-            Assert.That(filterNumbers[4], Is.EqualTo(10));
+            Assert.That(filterNumbers[0], Is.EqualTo(0));
+            Assert.That(filterNumbers[1], Is.EqualTo(2));
+            Assert.That(filterNumbers[2], Is.EqualTo(4));
+            Assert.That(filterNumbers[3], Is.EqualTo(6));
+            Assert.That(filterNumbers[4], Is.EqualTo(8));
+            Assert.That(filterNumbers[5], Is.EqualTo(10));
         }
 
         [Test]
@@ -66,7 +67,7 @@ namespace NumericSequenceCalculator.Tests
 
             var filterNumbers = numbers.Filter(new FibonacciNumberFilter());
 
-            Assert.That(filterNumbers.Count(), Is.EqualTo(5));
+            Assert.That(filterNumbers.Count(), Is.EqualTo(7));
         }
 
         [Test]
@@ -76,7 +77,7 @@ namespace NumericSequenceCalculator.Tests
 
             var filterNumbers = numbers.Filter(new FibonacciNumberFilter());
 
-            Assert.That(filterNumbers.Count(), Is.EqualTo(1));
+            Assert.That(filterNumbers.Count(), Is.EqualTo(2));
         }
 
         [Test]
@@ -86,7 +87,7 @@ namespace NumericSequenceCalculator.Tests
 
             var filterNumbers = numbers.Filter(new FibonacciNumberFilter());
 
-            Assert.That(filterNumbers.Count(), Is.EqualTo(10));
+            Assert.That(filterNumbers.Count(), Is.EqualTo(12));
         }
 
         [Test]
@@ -96,11 +97,13 @@ namespace NumericSequenceCalculator.Tests
 
             var filterNumbers = numbers.Filter(new FibonacciNumberFilter());
 
-            Assert.That(filterNumbers[0], Is.EqualTo(1));
-            Assert.That(filterNumbers[1], Is.EqualTo(2));
-            Assert.That(filterNumbers[2], Is.EqualTo(3));
-            Assert.That(filterNumbers[3], Is.EqualTo(5));
-            Assert.That(filterNumbers[4], Is.EqualTo(8));
+            Assert.That(filterNumbers[0], Is.EqualTo(0));
+            Assert.That(filterNumbers[1], Is.EqualTo(1));
+            Assert.That(filterNumbers[2], Is.EqualTo(1));
+            Assert.That(filterNumbers[3], Is.EqualTo(2));
+            Assert.That(filterNumbers[4], Is.EqualTo(3));
+            Assert.That(filterNumbers[5], Is.EqualTo(5));
+            Assert.That(filterNumbers[6], Is.EqualTo(8));
         }
     }
 }
