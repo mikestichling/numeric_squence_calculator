@@ -20,7 +20,7 @@ namespace NumericSequenceCalculator.Tests
 
             Assert.That(filterNumbers.Count(), Is.EqualTo(6));
         }
-
+        
         [Test]
         public void GivenAnEvenFilter_WhenFilteringASequence_ThenItShouldOnlyReturnTheCorrectEvenNumbersFromTheSequence()
         {
@@ -88,6 +88,12 @@ namespace NumericSequenceCalculator.Tests
             var filterNumbers = numbers.Process(new FibonacciNumberFilter());
 
             Assert.That(filterNumbers.Count(), Is.EqualTo(12));
+        }
+
+        [Test]
+        public void GivenAnFibonacciFilter_WhenFilteringASequenceWithAVeryLargeNumber_ThenItShouldThrowAnException()
+        {
+            Assert.That(() => new NumberSequence(1000000000), Throws.Exception.TypeOf<OutOfMemoryException>());
         }
 
         [Test]
