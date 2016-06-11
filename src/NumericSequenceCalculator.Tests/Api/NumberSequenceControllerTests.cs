@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using NumericSequenceCalculator.DomainLogic;
 using NumericSequenceCalculator.DomainLogic.Entities;
 using NumericSequenceCalculator.WebApi.Controllers;
 
@@ -14,7 +15,7 @@ namespace NumericSequenceCalculator.Tests.Api
         [Test]
         public void GivenANumberSequenceController_WhenGettingWithANumber_ThenItShouldWork()
         {
-            var controller = new NumberSequenceController();
+            var controller = GivenANumberSequenceController();
 
             var result = controller.Get(10);
 
@@ -24,7 +25,7 @@ namespace NumericSequenceCalculator.Tests.Api
         [Test]
         public void GivenANumberSequenceController_WhenGettingWithANumber_ThenItShouldAListOfProcessResults()
         {
-            var controller = new NumberSequenceController();
+            var controller = GivenANumberSequenceController();
 
             var result = controller.Get(10);
 
@@ -34,7 +35,7 @@ namespace NumericSequenceCalculator.Tests.Api
         [Test]
         public void GivenANumberSequenceController_WhenGettingWithANumberAndTheDefaultProcessor_ThenItShouldReturnTheCorrectResult()
         {
-            var controller = new NumberSequenceController();
+            var controller = GivenANumberSequenceController();
 
             var result = controller.Get(10).ToList();
 
@@ -51,6 +52,13 @@ namespace NumericSequenceCalculator.Tests.Api
             Assert.That(result[0].Numbers[8].Value, Is.EqualTo(8));
             Assert.That(result[0].Numbers[9].Value, Is.EqualTo(9));
             Assert.That(result[0].Numbers[10].Value, Is.EqualTo(10));
+        }
+
+        private NumberSequenceController GivenANumberSequenceController()
+        {
+            var numberSequenceLogic = new NumberSequenceLogic();
+            var controller = new NumberSequenceController(numberSequenceLogic);
+            return controller;
         }
     }
 }

@@ -11,11 +11,15 @@ namespace NumericSequenceCalculator.WebApi.Controllers
 {
     public class NumberSequenceController : ApiController
     {
+        private readonly INumberSequenceLogic numberSequenceLogic;
+        public NumberSequenceController(INumberSequenceLogic numberSequenceLogic)
+        {
+            this.numberSequenceLogic = numberSequenceLogic;
+        }
+
         // GET api/<controller>/5
         public IEnumerable<ProcessResult> Get(int number)
         {
-            var numberSequenceLogic = new NumberSequenceLogic();
-
             var result = numberSequenceLogic.GetProcessedList(number);
 
             return result;

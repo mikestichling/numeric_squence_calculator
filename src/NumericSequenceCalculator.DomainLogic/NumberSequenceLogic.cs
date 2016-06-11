@@ -19,7 +19,7 @@ namespace NumericSequenceCalculator.DomainLogic
             : this(new List<NumberProcessor>())
         {}
         
-        internal NumberSequenceLogic(List<NumberProcessor> processors)
+        public NumberSequenceLogic(List<NumberProcessor> processors)
         {
             this.processors = processors;
         }
