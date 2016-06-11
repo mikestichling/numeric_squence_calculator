@@ -1,5 +1,7 @@
 # Numeric-sequence-calculator-frontend
 
+![](https://api.travis-ci.org/mikestichling/numeric_squence_calculator.svg)
+
 This application is a way to calculate the numeric sequences from 0 to a number specified by the user. 
 
 ## Prerequisites
