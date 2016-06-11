@@ -8,7 +8,7 @@ namespace NumericSequenceCalculator.Domain
 {
     public class MaskedNumber : Number
     {
-        private string mask;
+        private readonly string mask;
         public MaskedNumber(int number, string mask) : base(number)
         {
             this.mask = mask;

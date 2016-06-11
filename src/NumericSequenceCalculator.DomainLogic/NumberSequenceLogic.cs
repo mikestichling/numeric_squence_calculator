@@ -11,7 +11,7 @@ namespace NumericSequenceCalculator.DomainLogic
     public class NumberSequenceLogic : INumberSequenceLogic
     {
         
-        private List<NumberProcessor> processors;
+        private readonly List<NumberProcessor> processors;
 
         public NumberSequenceLogic()
             : this(new List<NumberProcessor>())

@@ -36,14 +36,14 @@ namespace NumericSequenceCalculator.Domain.Filters
             return fibonaccis;
         }
 
-        private bool OutOfBounds(int i)
-        {
-            return i - 1 < 0 || i - 2 < 0;
-        }
-
         public override string Name
         {
             get { return "Fibonacci Sequence"; }
+        }
+
+        private bool OutOfBounds(int i)
+        {
+            return i - 1 < 0 || i - 2 < 0;
         }
     }
 }

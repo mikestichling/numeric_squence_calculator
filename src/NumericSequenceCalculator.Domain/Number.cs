@@ -2,7 +2,7 @@
 {
     public class Number
     {
-        private int number;
+        private readonly int number;
         public Number(int number)
         {
             this.number = number;
