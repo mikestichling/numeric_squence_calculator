@@ -11,9 +11,9 @@ namespace NumericSequenceCalculator.Domain.Masks
     {
         internal override List<Number> Process(List<Number> numbers)
         {
-            return numbers.Select(number => number.Value % 5 == 0 && number.Value % 3 == 0 ? 
+            return numbers.Select(number => number.Value % 5 == 0 && number.Value % 3 == 0  ? 
                 new MaskedNumber(number.Value, "Z") 
-                : new Number(number.Value)).ToList();
+                : number).ToList();
         }
 
         public override string Name

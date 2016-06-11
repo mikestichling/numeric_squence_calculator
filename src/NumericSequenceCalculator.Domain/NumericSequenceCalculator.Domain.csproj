@@ -45,6 +45,7 @@
     <Compile Include="Guards\NumberGuards.cs" />
     <Compile Include="Exceptions\NumberArgumentException.cs" />
     <Compile Include="MaskedNumber.cs" />
+    <Compile Include="Masks\CombinationMask.cs" />
     <Compile Include="Masks\MultipleOfFiveAndThreeMask.cs" />
     <Compile Include="Masks\MultipleOfFiveMask.cs" />
     <Compile Include="Masks\MultipleOfThreeMask.cs" />

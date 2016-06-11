@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 using NumericSequenceCalculator.Domain;
 using NumericSequenceCalculator.Domain.Masks;
@@ -95,5 +96,19 @@ namespace NumericSequenceCalculator.Tests.Domain
             Assert.That(maskedNumbers[14].DisplayValue, Is.EqualTo("14"));
             Assert.That(maskedNumbers[15].DisplayValue, Is.EqualTo("Z"));
         }
+
+        [Test]
+        public void GivenANumberMask_WhenProcessingASequenceUsingTheCombindationMask_ThenItShouldReturnTheCorrectNumberOfMasks()
+        {
+            var mask = new CombinationMask(new List<NumberProcessor>() { new MultipleOfThreeMask(), new MultipleOfFiveMask(), new MultipleOfFiveAndThreeMask()});
+            var numbers = new NumberSequence(50);
+
+            var maskedNumbers = numbers.Process(mask);
+
+            Assert.That(maskedNumbers.Where(n => n.DisplayValue == "E").Count(), Is.EqualTo(7));
+            Assert.That(maskedNumbers.Where(n => n.DisplayValue == "Z").Count(), Is.EqualTo(4));
+            Assert.That(maskedNumbers.Where(n => n.DisplayValue == "C").Count(), Is.EqualTo(13));
+        }
+
     }
 }

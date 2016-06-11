@@ -13,7 +13,7 @@ namespace NumericSequenceCalculator.Domain.Masks
         {
             return numbers.Select(number => number.Value % 3 == 0 ? 
                 new MaskedNumber(number.Value, "C") 
-                : new Number(number.Value)).ToList();
+                : number).ToList();
         }
 
         public override string Name
