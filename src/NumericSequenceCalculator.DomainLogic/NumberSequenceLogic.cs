@@ -30,7 +30,7 @@ namespace NumericSequenceCalculator.DomainLogic
             //add the actual sequence of numbers to the results.
             results.Add(new ProcessResult(numberSequence));
 
-            //go through each registered processor and add the resultant sequence to the result.
+            //go through each registered processors and add the resultant sequence to the result.
             foreach (var processor in processors)
             {
                 var processedSequence = numberSequence.Process(processor);
