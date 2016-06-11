@@ -20,7 +20,7 @@ namespace NumericSequenceCalculator.WebApi.Controllers
         // GET api/<controller>/5
         public IEnumerable<ProcessResult> Get(int number)
         {
-            var result = numberSequenceLogic.GetProcessedList(number);
+            var result = numberSequenceLogic.GetProcessedSequence(number);
 
             return result;
         }

@@ -26,7 +26,7 @@ namespace NumericSequenceCalculator.Tests.DomainLogic
         {
             var numberSequenceLogic = new NumberSequenceLogic();
 
-            var result = numberSequenceLogic.GetProcessedList(10);
+            var result = numberSequenceLogic.GetProcessedSequence(10);
 
             Assert.That(result, Is.TypeOf<List<ProcessResult>>());
         }
@@ -36,7 +36,7 @@ namespace NumericSequenceCalculator.Tests.DomainLogic
         {
             var numberSequenceLogic = new NumberSequenceLogic(new List<NumberProcessor> { new EvenNumberFilter() });
 
-            var result = numberSequenceLogic.GetProcessedList(10);
+            var result = numberSequenceLogic.GetProcessedSequence(10);
 
             Assert.That(result.Count, Is.EqualTo(2));
         }
@@ -46,7 +46,7 @@ namespace NumericSequenceCalculator.Tests.DomainLogic
         {
             var numberSequenceLogic = new NumberSequenceLogic(new List<NumberProcessor> { new OddNumberFilter() });
 
-            var result = numberSequenceLogic.GetProcessedList(10);
+            var result = numberSequenceLogic.GetProcessedSequence(10);
 
             Assert.That(result[0].ProcessorName, Is.EqualTo("Sequence of numbers from 0 to 10"));
             Assert.That(result[1].ProcessorName, Is.EqualTo("Odd Numbers"));

@@ -9,6 +9,6 @@ namespace NumericSequenceCalculator.DomainLogic
 {
     public interface INumberSequenceLogic
     {
-        IList<ProcessResult> GetProcessedList(int number);
+        IList<ProcessResult> GetProcessedSequence(int number);
     }
 }
