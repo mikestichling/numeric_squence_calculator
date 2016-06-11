@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NumericSequenceCalculator.DomainLogic</RootNamespace>
     <AssemblyName>NumericSequenceCalculator.DomainLogic</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,8 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Entities\NumberDto.cs" />
+    <Compile Include="Entities\ProcessResult.cs" />
+    <Compile Include="INumberSequenceLogic.cs" />
+    <Compile Include="NumberSequenceLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NumericSequenceCalculator.Domain\NumericSequenceCalculator.Domain.csproj">
+      <Project>{eff8178d-6fac-41e3-a719-7e7ecefb9371}</Project>
+      <Name>NumericSequenceCalculator.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

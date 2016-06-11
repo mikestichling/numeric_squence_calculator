@@ -4,6 +4,8 @@ namespace NumericSequenceCalculator.Domain
 {
     public abstract class NumberProcessor
     {
-        public abstract List<Number> Process(List<Number> numbers);
+        internal abstract List<Number> Process(List<Number> numbers);
+
+        public abstract string Name { get; }
     }
 }

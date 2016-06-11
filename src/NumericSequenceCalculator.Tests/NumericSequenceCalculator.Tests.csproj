@@ -43,10 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomainLogic\NumberSequenceLogicTests.cs" />
+    <Compile Include="DomainLogic\ProcessResultTests.cs" />
     <Compile Include="Domain\MaskedNumberTests.cs" />
     <Compile Include="Domain\NumberFilterTests.cs" />
     <Compile Include="Domain\NumberGuardTests.cs" />
     <Compile Include="Domain\NumberMaskTests.cs" />
+    <Compile Include="Domain\NumberProcessorTests.cs" />
     <Compile Include="Domain\NumberSequenceTests.cs" />
     <Compile Include="Domain\NumberTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

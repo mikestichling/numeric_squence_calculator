@@ -8,7 +8,7 @@ namespace NumericSequenceCalculator.Domain.Filters
 {
     public class FibonacciNumberFilter : NumberProcessor
     {
-        public override List<Number> Process(List<Number> numbers)
+        internal override List<Number> Process(List<Number> numbers)
         {
             if (numbers.Count <= 2)
                 return numbers;
@@ -39,6 +39,11 @@ namespace NumericSequenceCalculator.Domain.Filters
         private bool OutOfBounds(int i)
         {
             return i - 1 < 0 || i - 2 < 0;
+        }
+
+        public override string Name
+        {
+            get { return "Fibonacci Sequence"; }
         }
     }
 }

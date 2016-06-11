@@ -39,5 +39,13 @@ namespace NumericSequenceCalculator.Domain
         {
             return processor.Process(this.sequence);
         }
+
+        public string Name
+        {
+            get
+            {
+                return string.Format("Sequence of numbers from 0 to {0}", this.sequence.Count - 1);
+            }
+        }
     }
 }
