@@ -33,6 +33,5 @@ namespace NumericSequenceCalculator.Tests.DomainLogic
 
             Assert.That(processResult.ProcessorName, Is.EqualTo("Unknown"));
         }
-
     }
 }
