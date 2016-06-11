@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using NumericSequenceCalculator.Domain;
 using NumericSequenceCalculator.DomainLogic.Entities;
 
+[assembly: InternalsVisibleTo("NumericSequenceCalculator.Tests")]
 namespace NumericSequenceCalculator.DomainLogic
 {
     public class NumberSequenceLogic : INumberSequenceLogic
@@ -17,7 +19,7 @@ namespace NumericSequenceCalculator.DomainLogic
             : this(new List<NumberProcessor>())
         {}
         
-        public NumberSequenceLogic(List<NumberProcessor> processors)
+        internal NumberSequenceLogic(List<NumberProcessor> processors)
         {
             this.processors = processors;
         }
