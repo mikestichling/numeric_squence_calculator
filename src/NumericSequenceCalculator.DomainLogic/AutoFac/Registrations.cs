@@ -17,9 +17,6 @@ namespace NumericSequenceCalculator.DomainLogic.AutoFac
             var processors = new List<NumberProcessor>(){ 
                                 new OddNumberFilter(), 
                                 new EvenNumberFilter(),
-                                new MultipleOfThreeMask(), 
-                                new MultipleOfFiveMask(), 
-                                new MultipleOfFiveAndThreeMask(), 
                                 new CombinationMask(new List<NumberProcessor> { new MultipleOfThreeMask(), new MultipleOfFiveMask(), new MultipleOfFiveAndThreeMask()}),
                                 new FibonacciNumberFilter() };
 
