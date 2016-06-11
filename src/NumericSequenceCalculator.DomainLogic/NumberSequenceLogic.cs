@@ -42,11 +42,10 @@ namespace NumericSequenceCalculator.DomainLogic
             }
         }
 
-        private static List<ProcessResult> AddUnprocessedSequenceToResult(NumberSequence numberSequence, List<ProcessResult> results)
+        private static void AddUnprocessedSequenceToResult(NumberSequence numberSequence, List<ProcessResult> results)
         {
             //add the actual sequence of numbers to the results.
             results.Add(new ProcessResult(numberSequence));
-            return results;
         }
     }
 }
