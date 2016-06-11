@@ -90,7 +90,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\numeric-sequence-calculator-frontend-0e82c3bb4e1e483ddc961715c9211934.js" />
+    <Content Include="assets\numeric-sequence-calculator-frontend-d41d8cd98f00b204e9800998ecf8427e.css" />
+    <Content Include="assets\vendor-2ac5f56489f7a9cdc6e33798267618fb.css" />
+    <Content Include="assets\vendor-9599dd4b9db721f67ecf83119f494457.js" />
+    <Content Include="crossdomain.xml" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="robots.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +112,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
