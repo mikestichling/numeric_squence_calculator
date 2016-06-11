@@ -25,8 +25,10 @@ namespace NumericSequenceCalculator.DomainLogic
             var numberSequence = new NumberSequence(number);
             var results = new List<ProcessResult>();
 
+            //add the actual sequence of numbers to the results.
             AddUnprocessedSequenceToResult(numberSequence, results);
 
+            //go through each registered processors and add the resultant sequence to the result.
             AddResultOfEachProcessToResult(numberSequence, results);
 
             return results;
@@ -34,7 +36,6 @@ namespace NumericSequenceCalculator.DomainLogic
 
         private void AddResultOfEachProcessToResult(NumberSequence numberSequence, List<ProcessResult> results)
         {
-            //go through each registered processors and add the resultant sequence to the result.
             foreach (var processor in processors)
             {
                 var processedSequence = numberSequence.Process(processor);
@@ -44,7 +45,6 @@ namespace NumericSequenceCalculator.DomainLogic
 
         private static void AddUnprocessedSequenceToResult(NumberSequence numberSequence, List<ProcessResult> results)
         {
-            //add the actual sequence of numbers to the results.
             results.Add(new ProcessResult(numberSequence));
         }
     }
