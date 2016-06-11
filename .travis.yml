@@ -2,9 +2,9 @@ language: csharp
 solution: NumericSequenceCalculator.sln
 install:
   - nuget restore NumericSequenceCalculator.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+  - nuget install NUnit.Runners -Version 3.2.0 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release NumericSequenceCalculator.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./src/NumericSequenceCalculator.Tests/bin/Release/NumericSequenceCalculator.Tests.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.2.0/tools/nunit3-console.exe ./src/NumericSequenceCalculator.Tests/bin/Release/NumericSequenceCalculator.Tests.dll
 notifications:
   email: false
