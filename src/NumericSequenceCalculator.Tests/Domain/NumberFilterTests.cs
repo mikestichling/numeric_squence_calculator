@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 using NumericSequenceCalculator.Domain;
 using NumericSequenceCalculator.Domain.Filters;
 
-namespace NumericSequenceCalculator.Tests
+namespace NumericSequenceCalculator.Tests.Domain
 {
     public class NumberFilterTests
     {
@@ -18,7 +14,7 @@ namespace NumericSequenceCalculator.Tests
 
             var filterNumbers = numbers.Process(new EvenNumberFilter());
 
-            Assert.That(filterNumbers.Count(), Is.EqualTo(6));
+            Assert.That(filterNumbers.Count, Is.EqualTo(6));
         }
         
         [Test]
@@ -43,7 +39,7 @@ namespace NumericSequenceCalculator.Tests
 
             var filterNumbers = numbers.Process(new OddNumberFilter());
 
-            Assert.That(filterNumbers.Count(), Is.EqualTo(5));
+            Assert.That(filterNumbers.Count, Is.EqualTo(5));
         }
 
         [Test]
@@ -67,7 +63,7 @@ namespace NumericSequenceCalculator.Tests
 
             var filterNumbers = numbers.Process(new FibonacciNumberFilter());
 
-            Assert.That(filterNumbers.Count(), Is.EqualTo(7));
+            Assert.That(filterNumbers.Count, Is.EqualTo(7));
         }
 
         [Test]
@@ -77,7 +73,7 @@ namespace NumericSequenceCalculator.Tests
 
             var filterNumbers = numbers.Process(new FibonacciNumberFilter());
 
-            Assert.That(filterNumbers.Count(), Is.EqualTo(2));
+            Assert.That(filterNumbers.Count, Is.EqualTo(2));
         }
 
         [Test]
@@ -87,7 +83,7 @@ namespace NumericSequenceCalculator.Tests
 
             var filterNumbers = numbers.Process(new FibonacciNumberFilter());
 
-            Assert.That(filterNumbers.Count(), Is.EqualTo(12));
+            Assert.That(filterNumbers.Count, Is.EqualTo(12));
         }
 
         [Test]

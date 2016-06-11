@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7C1A7BA3-B270-487A-8FC9-D4D3429E0F5E}</ProjectGuid>
+    <ProjectGuid>{DFADD2F9-8F93-4679-AF31-0F632F86014C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NumericSequenceCalculator.Tests</RootNamespace>
-    <AssemblyName>NumericSequenceCalculator.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>NumericSequenceCalculator.DomainLogic</RootNamespace>
+    <AssemblyName>NumericSequenceCalculator.DomainLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <HintPath>..\..\packages\NUnit.3.2.1\lib\net45\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,26 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\MaskedNumberTests.cs" />
-    <Compile Include="Domain\NumberFilterTests.cs" />
-    <Compile Include="Domain\NumberGuardTests.cs" />
-    <Compile Include="Domain\NumberMaskTests.cs" />
-    <Compile Include="Domain\NumberSequenceTests.cs" />
-    <Compile Include="Domain\NumberTests.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NumericSequenceCalculator.DomainLogic\NumericSequenceCalculator.DomainLogic.csproj">
-      <Project>{dfadd2f9-8f93-4679-af31-0f632f86014c}</Project>
-      <Name>NumericSequenceCalculator.DomainLogic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NumericSequenceCalculator.Domain\NumericSequenceCalculator.Domain.csproj">
-      <Project>{eff8178d-6fac-41e3-a719-7e7ecefb9371}</Project>
-      <Name>NumericSequenceCalculator.Domain</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
