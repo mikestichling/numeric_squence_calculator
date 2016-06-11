@@ -11,13 +11,7 @@ namespace NumericSequenceCalculator.Domain.Masks
     {
         public override List<Number> Process(List<Number> numbers)
         {
-            var maskedNumbers = new List<Number>();
-            foreach (var number in numbers)
-            {
-                maskedNumbers.Add(number.Value % 5 == 0 && number.Value % 3 == 0 ? new MaskedNumber(number.Value, "Z") : new Number(number.Value));
-            }
-
-            return maskedNumbers;
+            return numbers.Select(number => number.Value % 5 == 0 && number.Value % 3 == 0 ? new MaskedNumber(number.Value, "Z") : new Number(number.Value)).ToList();
         }
     }
 }
