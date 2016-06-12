@@ -1,4 +1,4 @@
-# Numeric-sequence-calculator-frontend
+# Numeric-sequence-calculator
 
 ![](https://api.travis-ci.org/mikestichling/numeric_squence_calculator.svg)
 
