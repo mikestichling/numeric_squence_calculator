@@ -6,7 +6,7 @@ This application is a way to calculate the numeric sequences from 0 to a number 
 
 ## Prerequisites
 
-You will need the following things properly installed on your computer.
+You will need the following things properly installed on your environment.
 
 * Visual Studio .Net Framework 4.5.1
 * [Git](http://git-scm.com/)
@@ -19,8 +19,14 @@ You will need the following things properly installed on your computer.
 * open NumericSequenceCalculator.sln
 * Build the application
 * Run the tests using NUnit 3 Test Adapter
-* Run the application using visual studio
+* Run the application using Visual Studio
+
+### Running
+
+You can point your browser to `http://localhost:56033/index.html` once the application is built and running. 
+
+If you want to test the API independently from the Frontend, you can point your browser to `http://localhost:56033/swagger/ui/index` and start interacting with the methods on the API. [swagger.io/](http://swagger.io/). Swagger is a framework for testing and navigating an API.
 
 ### Deploying
 
-Deploy the app is as simple as pushing the latest changes to github. Azure will trigger a deployment at the latest push.
+Deploy the app is as simple as pushing the latest changes to GitHub. Azure will trigger a deployment at the latest push.
