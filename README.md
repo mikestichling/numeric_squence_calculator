@@ -25,7 +25,7 @@ You will need the following things properly installed on your environment.
 
 You can point your browser to `http://localhost:56033/index.html` once the application is built and running. 
 
-If you want to test the API independently from the Frontend, you can point your browser to `http://localhost:56033/swagger/ui/index` and start interacting with the methods on the API. [swagger.io/](http://swagger.io/). Swagger is a framework for testing and navigating an API.
+If you want to test the API independently from the Frontend, you can point your browser to `http://localhost:56033/swagger/ui/index` and start interacting with the methods on the API. [Swagger](http://swagger.io/) is a framework for testing and navigating an API.
 
 ### Deploying
 
