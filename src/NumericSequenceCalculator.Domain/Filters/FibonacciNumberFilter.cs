@@ -27,13 +27,18 @@ namespace NumericSequenceCalculator.Domain.Filters
                     continue;
                 }
 
-                if (current == fibonaccis[fibonaccis.Count - 1].Value + fibonaccis[fibonaccis.Count - 2].Value)
+                if (SumOfTwoPreviousNumbersEqualsCurrent(current, fibonaccis))
                 {
                     fibonaccis.Add(new Number(current));
                 }
             }
 
             return fibonaccis;
+        }
+
+        private static bool SumOfTwoPreviousNumbersEqualsCurrent(int current, List<Number> fibonaccis)
+        {
+            return current == fibonaccis[fibonaccis.Count - 1].Value + fibonaccis[fibonaccis.Count - 2].Value;
         }
 
         public override string Name
